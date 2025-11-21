@@ -437,6 +437,7 @@ section {
   position: relative;
   background: var(--color-bg-white);
   overflow: hidden;
+  z-index: 1;
 }
 
 .about-bg-image {
