@@ -924,8 +924,19 @@ section {
     padding-bottom: 60px;
   }
 
+  .hero-content,
+  .hero-content-centered {
+    text-align: center;
+  }
+
   .hero-title {
     font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .hero-subtitle,
+  .hero-text {
+    text-align: center;
   }
 
   .hero-buttons {
