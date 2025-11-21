@@ -385,29 +385,6 @@ section {
   flex-wrap: wrap;
 }
 
-/* Hero Background Image */
-.hero-bg-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url('hero-image.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.15;
-  z-index: 0;
-  animation: heroBgFloat 8s ease-in-out infinite;
-}
-
-@keyframes heroBgFloat {
-  0%, 100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.02);
-  }
-}
 
 .hero-inner-centered {
   display: flex;
@@ -457,7 +434,37 @@ section {
    ABOUT SECTION
    ========================================== */
 .about {
+  position: relative;
   background: var(--color-bg-white);
+  overflow: hidden;
+}
+
+.about-bg-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('hero-image.png');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.12;
+  z-index: 0;
+  animation: aboutBgFloat 10s ease-in-out infinite;
+}
+
+@keyframes aboutBgFloat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+.about .container {
+  position: relative;
+  z-index: 1;
 }
 
 .about-content {
