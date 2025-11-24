@@ -18,10 +18,10 @@
   --color-bg-light: #F7F5F2;
   --color-bg-soft: #EEF4F7;
 
-  /* ===== Text Colors ===== */
-  --color-text-main: #3D4451;
-  --color-text-sub: #5C6470;
-  --color-text-muted: #8B919A;
+  /* ===== Text Colors (やわらかく) ===== */
+  --color-text-main: #4A4A4A;
+  --color-text-sub: #6B6B6B;
+  --color-text-muted: #9A9A9A;
   --color-text-white: #FFFFFF;
 
   /* ===== Accent Colors (from icon) ===== */
@@ -83,9 +83,10 @@ html {
 }
 
 body {
-  font-family: 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'M PLUS Rounded 1c', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 400;
-  line-height: 1.9;
+  line-height: 1.8;
+  letter-spacing: 0.02em;
   color: var(--color-text-main);
   background-color: var(--color-bg-white);
   overflow-x: hidden;
@@ -195,10 +196,19 @@ section {
 
 .section-title {
   font-size: clamp(1.6rem, 4vw, 2.2rem);
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 16px;
   color: var(--color-text-main);
+}
+
+.section-lead {
+  font-size: 0.9rem;
+  color: var(--color-green);
+  text-align: center;
+  margin-bottom: 8px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
 }
 
 .section-subtitle {
@@ -235,7 +245,7 @@ section {
 
 .logo {
   font-size: 1.4rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-green);
 }
 
@@ -359,7 +369,7 @@ section {
 
 .hero-title {
   font-size: clamp(1.8rem, 5vw, 2.8rem);
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.4;
   margin-bottom: 20px;
   color: var(--color-text-main);
@@ -487,7 +497,7 @@ section {
 
 .about-tagline {
   font-size: 1.2rem !important;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-green) !important;
   margin-top: 32px !important;
 }
@@ -531,13 +541,13 @@ section {
   background: var(--color-green-pale);
   color: var(--color-green);
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 20px;
 }
 
 .credo-title {
   font-size: 1.1rem;
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 16px;
   line-height: 1.5;
   color: var(--color-text-main);
@@ -592,12 +602,12 @@ section {
   background: var(--color-green);
   color: white;
   font-size: 0.8rem;
-  font-weight: 700;
+  font-weight: 500;
 }
 
 .service-name {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-text-main);
 }
 
@@ -723,7 +733,7 @@ section {
 
 .message-headline {
   font-size: 1.3rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.7;
   margin-bottom: 28px;
   color: var(--color-text-main);
@@ -761,7 +771,7 @@ section {
 
 .contact-title {
   font-size: clamp(1.4rem, 4vw, 1.8rem);
-  font-weight: 700;
+  font-weight: 500;
   margin-bottom: 12px;
   color: var(--color-text-main);
 }
@@ -796,7 +806,7 @@ section {
 
 .footer-logo {
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--color-green);
 }
 
@@ -1043,4 +1053,1416 @@ a:focus-visible,
 button:focus-visible {
   outline: 2px solid var(--color-green);
   outline-offset: 4px;
+}
+
+/* ==========================================
+   PORTFOLIO PAGE
+   ========================================== */
+
+/* Portfolio Hero */
+.portfolio-hero {
+  padding-top: calc(var(--header-height) + 60px);
+  padding-bottom: 60px;
+  background: linear-gradient(180deg, var(--color-bg-soft) 0%, var(--color-bg-white) 100%);
+  text-align: center;
+}
+
+.portfolio-hero-title {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+
+.portfolio-hero-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin-bottom: 20px;
+  letter-spacing: 0.1em;
+}
+
+.portfolio-hero-desc {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.9;
+}
+
+/* Portfolio Section */
+.portfolio-section {
+  background: var(--color-bg-white);
+  padding: 60px 0 100px;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+}
+
+/* Portfolio Card Link */
+.portfolio-card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Portfolio Card */
+.portfolio-card {
+  background: var(--color-bg-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-medium);
+  cursor: pointer;
+}
+
+.portfolio-card-link:hover .portfolio-card,
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-medium);
+  border-color: var(--color-green-light);
+}
+
+.portfolio-card-image {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background: var(--color-bg-soft);
+  overflow: hidden;
+}
+
+.portfolio-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+
+.portfolio-card:hover .portfolio-card-image img {
+  transform: scale(1.05);
+}
+
+.portfolio-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-sky-pale) 0%, var(--color-green-pale) 100%);
+}
+
+.portfolio-placeholder-icon {
+  font-size: 4rem;
+  opacity: 0.8;
+}
+
+.portfolio-card-content {
+  padding: 24px;
+}
+
+.portfolio-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-bottom: 12px;
+}
+
+/* Webサイト - 緑系 */
+.portfolio-tag.tag-website {
+  background: var(--color-green-pale);
+  color: var(--color-green);
+}
+
+/* アプリ - ピンク系 */
+.portfolio-tag.tag-app {
+  background: var(--color-pink-pale);
+  color: var(--color-pink);
+}
+
+.portfolio-card-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+}
+
+.portfolio-card-desc {
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.portfolio-card-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.portfolio-card-features li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 6px;
+}
+
+.portfolio-card-features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-green-light);
+}
+
+/* Portfolio CTA */
+.portfolio-cta {
+  background: var(--color-bg-cream);
+  padding: 80px 0;
+}
+
+.portfolio-cta-inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.portfolio-cta-title {
+  font-size: clamp(1.3rem, 4vw, 1.6rem);
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+}
+
+.portfolio-cta-text {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/* Active nav link */
+.nav-list a.active {
+  color: var(--color-green);
+}
+
+.nav-list a.active::after {
+  width: 100%;
+}
+
+/* Portfolio Responsive */
+@media (max-width: 768px) {
+  .portfolio-hero {
+    padding-top: calc(var(--header-height) + 40px);
+    padding-bottom: 40px;
+  }
+
+  .portfolio-hero-desc br {
+    display: none;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .portfolio-card-image {
+    height: 180px;
+  }
+
+  .portfolio-cta {
+    padding: 60px 0;
+  }
+
+  .portfolio-cta-text br {
+    display: none;
+  }
+}
+
+/* ==========================================
+   PRICE LP PAGE
+   ========================================== */
+
+/* LP Hero */
+.lp-hero {
+  padding-top: calc(var(--header-height) + 80px);
+  padding-bottom: 80px;
+  background: linear-gradient(180deg, var(--color-bg-cream) 0%, var(--color-bg-white) 100%);
+  text-align: center;
+}
+
+.lp-hero-badge {
+  display: inline-block;
+  padding: 8px 24px;
+  background: var(--color-pink);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: var(--radius-full);
+  margin-bottom: 24px;
+}
+
+.lp-hero-title {
+  font-size: clamp(1.8rem, 5vw, 2.8rem);
+  font-weight: 500;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: var(--color-text-main);
+}
+
+.lp-hero-desc {
+  font-size: 1.1rem;
+  color: var(--color-text-sub);
+  line-height: 2;
+}
+
+/* LP Section Common */
+.lp-section-title {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--color-text-main);
+}
+
+.lp-section-subtitle {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+/* LP Problems Section */
+.lp-problems {
+  background: var(--color-bg-white);
+  padding: 80px 0;
+}
+
+.lp-problem-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin: 48px 0;
+}
+
+.lp-problem-item {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: 32px 24px;
+  text-align: center;
+}
+
+.lp-problem-icon {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.lp-problem-item p {
+  color: var(--color-text-sub);
+  line-height: 1.8;
+}
+
+.lp-problem-item strong {
+  color: var(--color-text-main);
+}
+
+.lp-problems-answer {
+  text-align: center;
+  font-size: 1.2rem;
+  color: var(--color-text-main);
+  margin-top: 48px;
+}
+
+.lp-problems-answer .arrow-down {
+  font-size: 2rem;
+  color: var(--color-green);
+}
+
+/* LP Services Section */
+.lp-services {
+  background: var(--color-bg-soft);
+  padding: 80px 0;
+}
+
+.lp-service-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.lp-service-card {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+}
+
+.lp-service-icon {
+  font-size: 3rem;
+  margin-bottom: 16px;
+}
+
+.lp-service-name {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+
+.lp-service-sub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-bottom: 16px;
+}
+
+.lp-service-catch {
+  font-size: 1rem;
+  color: var(--color-text-main);
+  line-height: 1.8;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.lp-service-note {
+  margin-top: 20px;
+  padding: 16px;
+  background: var(--color-green-pale);
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  line-height: 1.7;
+}
+
+.lp-service-example {
+  background: var(--color-bg-light);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  color: var(--color-text-sub);
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+  border-left: 3px solid var(--color-pink);
+}
+
+.lp-service-detail p {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+
+.lp-service-detail ul {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.lp-service-detail li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  margin-bottom: 6px;
+}
+
+.lp-service-detail li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 500;
+}
+
+.lp-service-result {
+  background: var(--color-green-pale);
+  padding: 16px;
+  border-radius: var(--radius-sm);
+  font-size: 0.95rem;
+  color: var(--color-text-main);
+  line-height: 1.7;
+}
+
+.lp-service-result span {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--color-green);
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* LP Pricing Section */
+.lp-pricing {
+  background: var(--color-bg-white);
+  padding: 80px 0;
+}
+
+.lp-monitor-banner {
+  background: linear-gradient(135deg, var(--color-pink-pale), var(--color-sky-pale));
+  border: 2px solid var(--color-pink);
+  border-radius: var(--radius-lg);
+  padding: 24px 32px;
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.lp-monitor-badge {
+  display: inline-block;
+  background: var(--color-pink);
+  color: white;
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.lp-monitor-text {
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+}
+
+.lp-monitor-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.lp-price-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.lp-price-card {
+  background: var(--color-bg-white);
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  transition: all var(--transition-medium);
+}
+
+.lp-price-card:hover {
+  border-color: var(--color-green-light);
+  box-shadow: var(--shadow-medium);
+}
+
+.lp-price-card-popular {
+  border-color: var(--color-green);
+  position: relative;
+}
+
+.lp-popular-badge {
+  position: absolute;
+  top: -1px;
+  right: 24px;
+  background: var(--color-green);
+  color: white;
+  padding: 4px 16px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border-radius: 0 0 8px 8px;
+}
+
+.lp-price-header {
+  background: var(--color-bg-light);
+  padding: 24px;
+  text-align: center;
+}
+
+.lp-price-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.lp-price-header h3 {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.lp-price-time {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.lp-price-body {
+  padding: 24px;
+}
+
+.lp-price-amount {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.lp-price-amount .price {
+  font-size: 2rem;
+  font-weight: 500;
+  color: var(--color-green);
+}
+
+.lp-price-amount .price .yen {
+  font-size: 1rem;
+}
+
+.lp-price-amount .lp-price-note {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.lp-price-amount-sub {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.lp-price-regular {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  color: var(--color-text-muted);
+}
+
+.lp-price-regular .label {
+  font-size: 0.85rem;
+}
+
+.lp-price-regular .price {
+  font-size: 1rem;
+}
+
+.lp-price-monitor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background: var(--color-pink-pale);
+  border-radius: var(--radius-sm);
+  margin-bottom: 20px;
+}
+
+.lp-price-monitor .label {
+  font-size: 0.85rem;
+  color: var(--color-pink);
+  font-weight: 600;
+}
+
+.lp-price-monitor .price {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-pink);
+}
+
+.lp-price-monitor .price .yen {
+  font-size: 1rem;
+}
+
+.lp-price-includes {
+  list-style: none;
+}
+
+.lp-price-includes li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  margin-bottom: 8px;
+}
+
+.lp-price-includes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 500;
+}
+
+/* Monthly Support */
+.lp-monthly {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  text-align: center;
+}
+
+.lp-monthly-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.lp-monthly-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.lp-monthly-content {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.lp-monthly-desc {
+  color: var(--color-text-sub);
+  margin-bottom: 20px;
+}
+
+.lp-monthly-price {
+  margin-bottom: 20px;
+}
+
+.lp-monthly-price .price {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-green);
+}
+
+.lp-monthly-price .price .yen {
+  font-size: 1rem;
+}
+
+.lp-monthly-includes {
+  list-style: none;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.lp-monthly-includes li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.9rem;
+  color: var(--color-text-sub);
+  margin-bottom: 6px;
+}
+
+.lp-monthly-includes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 500;
+}
+
+.lp-monthly-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+/* LP Empathy Message */
+.lp-empathy {
+  margin-top: 48px;
+  padding: 32px;
+  background: linear-gradient(135deg, var(--color-pink-pale), var(--color-sky-pale));
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.lp-empathy-text {
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  line-height: 1.9;
+}
+
+/* LP Works Section */
+.lp-works {
+  background: var(--color-bg-soft);
+  padding: 80px 0;
+}
+
+.lp-works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.lp-works-card {
+  display: block;
+  background: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-medium);
+  box-shadow: var(--shadow-soft);
+}
+
+.lp-works-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-medium);
+}
+
+.lp-works-image {
+  height: 140px;
+  overflow: hidden;
+}
+
+.lp-works-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+
+.lp-works-card:hover .lp-works-image img {
+  transform: scale(1.05);
+}
+
+.lp-works-content {
+  padding: 16px;
+}
+
+.lp-works-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+  /* デフォルト: アプリ（ピンク） */
+  background: var(--color-pink-pale);
+  color: var(--color-pink);
+}
+
+.lp-works-tag.tag-website {
+  background: var(--color-green-pale);
+  color: var(--color-green);
+}
+
+.lp-works-content h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 4px;
+}
+
+.lp-works-content p {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.lp-works-more {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.lp-works-more a {
+  color: var(--color-green);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lp-works-more a:hover {
+  text-decoration: underline;
+}
+
+/* LP Reasons Section */
+.lp-reasons {
+  background: var(--color-bg-cream);
+  padding: 80px 0;
+}
+
+.lp-reason-list {
+  max-width: 700px;
+  margin: 48px auto 0;
+}
+
+.lp-reason-item {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin-bottom: 32px;
+}
+
+.lp-reason-number {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background: var(--color-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.lp-reason-content h3 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 8px;
+}
+
+.lp-reason-content p {
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+}
+
+/* LP FAQ Section */
+.lp-faq {
+  background: var(--color-bg-white);
+  padding: 80px 0;
+}
+
+.lp-faq-list {
+  max-width: 700px;
+  margin: 48px auto 0;
+}
+
+.lp-faq-item {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  margin-bottom: 16px;
+}
+
+.lp-faq-question {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+}
+
+.lp-faq-answer {
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+  padding-left: 24px;
+  border-left: 3px solid var(--color-green-light);
+}
+
+/* LP CTA Section */
+.lp-cta {
+  background: linear-gradient(135deg, var(--color-green-pale), var(--color-sky-pale));
+  padding: 80px 0;
+}
+
+.lp-cta-inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.lp-cta-lead {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 12px;
+}
+
+.lp-cta-title {
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.lp-cta-text {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+.lp-cta-note {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  margin-top: 16px;
+}
+
+/* LP Responsive */
+@media (max-width: 768px) {
+  .lp-hero {
+    padding-top: calc(var(--header-height) + 48px);
+    padding-bottom: 48px;
+  }
+
+  .lp-hero-title br,
+  .lp-hero-desc br {
+    display: none;
+  }
+
+  .lp-problems,
+  .lp-services,
+  .lp-pricing,
+  .lp-reasons,
+  .lp-faq,
+  .lp-cta {
+    padding: 60px 0;
+  }
+
+  .lp-problem-list,
+  .lp-service-cards,
+  .lp-price-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .lp-reason-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .lp-faq-answer {
+    padding-left: 16px;
+  }
+
+  .lp-cta-title br {
+    display: none;
+  }
+
+  .lp-empathy {
+    padding: 24px 16px;
+  }
+
+  .lp-empathy-text {
+    font-size: 1rem;
+  }
+
+  .lp-empathy-text br {
+    display: none;
+  }
+
+  .lp-works {
+    padding: 60px 0;
+  }
+
+  .lp-works-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .lp-works-image {
+    height: 100px;
+  }
+
+  .lp-works-content {
+    padding: 12px;
+  }
+
+  .lp-works-content h3 {
+    font-size: 0.9rem;
+  }
+
+  .lp-works-content p {
+    font-size: 0.75rem;
+  }
+}
+
+/* ========================================
+   Price Page Styles (New)
+   ======================================== */
+
+/* Price Hero */
+.price-hero {
+  background: var(--gradient-soft);
+  padding: 140px 0 80px;
+  text-align: center;
+}
+
+.price-hero-title {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-text-white);
+  margin-bottom: 24px;
+}
+
+.price-hero-lead {
+  font-size: 1.3rem;
+  color: var(--color-text-white);
+  line-height: 1.8;
+  margin-bottom: 32px;
+}
+
+.price-hero-desc {
+  max-width: 600px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+}
+
+.price-hero-desc p {
+  font-size: 1rem;
+  color: var(--color-text-main);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.price-hero-desc p:last-child {
+  margin-bottom: 0;
+}
+
+/* Price Consult */
+.price-consult {
+  padding: 60px 0;
+  background: var(--color-bg-cream);
+}
+
+.price-consult-inner {
+  text-align: center;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.price-consult-text {
+  font-size: 1.1rem;
+  color: var(--color-text-main);
+  line-height: 2;
+  margin-bottom: 24px;
+}
+
+/* Price Section */
+.price-section {
+  padding: 80px 0;
+  background: var(--color-bg-white);
+}
+
+.price-intro {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.price-section-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+}
+
+.price-section-desc {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+}
+
+/* Price Card */
+.price-card {
+  background: var(--color-bg-light);
+  border-radius: var(--radius-lg);
+  padding: 40px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.price-card-number {
+  position: absolute;
+  top: -16px;
+  left: 32px;
+  background: var(--color-green);
+  color: white;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.price-card-header {
+  margin-bottom: 24px;
+  padding-top: 16px;
+}
+
+.price-card-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+}
+
+.price-card-catch {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.8;
+}
+
+.price-card-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+
+.price-card-body-with-image {
+  grid-template-columns: 1fr 1.2fr;
+  align-items: start;
+}
+
+.price-card-image {
+  background: var(--color-bg-white);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  padding: 16px;
+}
+
+.price-card-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.price-card-right {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.price-card-pricing {
+  background: var(--color-bg-white);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  text-align: center;
+}
+
+.price-amount {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 8px;
+}
+
+.price-number {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--color-green);
+}
+
+.price-unit {
+  font-size: 1.2rem;
+  color: var(--color-text-main);
+}
+
+.price-time {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  margin-left: 4px;
+}
+
+.price-extra {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 8px;
+}
+
+.price-note {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-top: 4px;
+}
+
+.price-card-features h4 {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+}
+
+.price-card-features ul {
+  list-style: none;
+}
+
+.price-card-features li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.price-card-features li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: 500;
+}
+
+/* Price Security */
+.price-security {
+  padding: 60px 0;
+  background: var(--color-bg-soft);
+}
+
+.price-security-inner {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.price-security-icon {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+}
+
+.price-security-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 12px;
+}
+
+.price-security-lead {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  margin-bottom: 24px;
+}
+
+.price-security-list {
+  list-style: none;
+  text-align: left;
+  background: var(--color-bg-white);
+  padding: 24px 32px;
+  border-radius: var(--radius-md);
+}
+
+.price-security-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  color: var(--color-text-sub);
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+.price-security-list li:last-child {
+  margin-bottom: 0;
+}
+
+.price-security-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-green);
+  font-weight: bold;
+}
+
+/* Price Monitor Note */
+.price-monitor-note {
+  padding: 60px 0;
+  background: var(--color-bg-cream);
+}
+
+.price-monitor-inner {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.price-monitor-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 20px;
+}
+
+.price-monitor-text {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.9;
+  margin-bottom: 16px;
+}
+
+.price-monitor-highlight {
+  font-size: 1.05rem;
+  color: var(--color-green);
+  font-weight: 500;
+  line-height: 1.8;
+  margin-top: 24px;
+}
+
+/* Price CTA */
+.price-cta {
+  padding: 80px 0;
+  background: var(--gradient-warm);
+}
+
+.price-cta-inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.price-cta-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: var(--color-text-main);
+  margin-bottom: 16px;
+}
+
+.price-cta-text {
+  font-size: 1rem;
+  color: var(--color-text-sub);
+  line-height: 1.9;
+  margin-bottom: 32px;
+}
+
+/* Price Page Responsive */
+@media (max-width: 768px) {
+  .price-hero {
+    padding: 120px 0 60px;
+  }
+
+  .price-hero-title {
+    font-size: 1.8rem;
+  }
+
+  .price-hero-lead {
+    font-size: 1.1rem;
+  }
+
+  .price-hero-desc {
+    padding: 24px;
+  }
+
+  .price-card {
+    padding: 32px 24px;
+  }
+
+  .price-card-body {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .price-card-body-with-image {
+    grid-template-columns: 1fr;
+  }
+
+  .price-card-image {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .price-number {
+    font-size: 2rem;
+  }
+
+  .price-section-title {
+    font-size: 1.5rem;
+  }
+
+  .price-cta-title {
+    font-size: 1.3rem;
+  }
 }
