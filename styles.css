@@ -272,34 +272,92 @@ section {
   gap: 36px;
 }
 
-/* ===== スマホメニュー (ハンバーガー) 修正 ===== */
-
-/* 開いたときの背景を完全に白にする */
-ul.nav-list.is-open {
-  background-color: #ffffff !important;
-  backdrop-filter: none !important;
-}
-
-/* メニューのテキストを濃くして見やすく */
-ul.nav-list.is-open li a {
-  color: #333333 !important;
-  font-weight: 600;
-}
-
-/* メニュー全体を上にかぶせる */
-ul.nav-list.is-open {
-  position: fixed !important;
+/* ===== モバイルメニューオーバーレイ（アプリ風UI） ===== */
+.mobile-menu-overlay {
+  position: fixed;
   top: 0;
-  right: 0;
   left: 0;
-  bottom: 0;
-  z-index: 9999;
-  padding: 80px 24px;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
-  gap: 24px !important;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  z-index: 99999;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.mobile-menu-overlay.is-open {
+  display: flex;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #eee;
+}
+
+.mobile-logo {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-green);
+}
+
+.mobile-close-btn {
+  font-size: 32px;
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 0;
+  line-height: 1;
+}
+
+.mobile-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.mobile-menu-list li {
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-menu-list a {
+  display: block;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #333;
+  padding: 16px 24px;
+  transition: color 0.2s ease;
+}
+
+.mobile-menu-list a:hover,
+.mobile-menu-list a.active {
+  color: var(--color-green);
+}
+
+.mobile-menu-footer {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 24px;
+  color: #999;
+  border-top: 1px solid #eee;
+}
+
+/* PCでは非表示 */
+@media (min-width: 769px) {
+  .mobile-menu-overlay {
+    display: none !important;
+  }
 }
 
 .nav-list a {

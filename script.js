@@ -78,20 +78,36 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ========================================
-  // Mobile Menu Toggle
+  // Mobile Menu Toggle (新しいオーバーレイメニュー)
   // ========================================
   const navToggle = document.querySelector('.nav-toggle');
-  const navList = document.querySelector('.nav-list');
+  const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
+  const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-list a');
 
-  if (navToggle && navList) {
+  // ハンバーガーボタンでメニューを開く
+  if (navToggle && mobileMenuOverlay) {
     navToggle.addEventListener('click', () => {
-      const isOpen = navList.classList.toggle('is-open');
-      navToggle.setAttribute('aria-expanded', isOpen);
-
-      // Prevent body scroll when menu is open
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+      mobileMenuOverlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
     });
   }
+
+  // 閉じるボタンでメニューを閉じる
+  if (mobileCloseBtn && mobileMenuOverlay) {
+    mobileCloseBtn.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+  }
+
+  // メニューリンクをクリックしたら閉じる
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      mobileMenuOverlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    });
+  });
 
   // ========================================
   // Header Scroll Effect
