@@ -68,9 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Close mobile menu if open
-        const navList = document.querySelector('.nav-list');
-        if (navList.classList.contains('is-open')) {
-          navList.classList.remove('is-open');
+        const mobileMenu = document.querySelector('.mobile-menu-overlay');
+        if (mobileMenu && mobileMenu.classList.contains('is-open')) {
+          mobileMenu.classList.remove('is-open');
           document.body.style.overflow = '';
         }
       }
