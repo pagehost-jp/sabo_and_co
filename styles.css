@@ -272,35 +272,34 @@ section {
   gap: 36px;
 }
 
-/* モバイルメニュー開いた時の背景 */
-@media (max-width: 768px) {
-  ul.nav-list.is-open {
-    display: flex !important;
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    background: #FFFFFF !important;
-    flex-direction: column !important;
-    align-items: center !important;
-    justify-content: center !important;
-    gap: 24px !important;
-    z-index: 99999 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
+/* ===== スマホメニュー (ハンバーガー) 修正 ===== */
 
-  ul.nav-list.is-open li {
-    list-style: none !important;
-  }
+/* 開いたときの背景を完全に白にする */
+ul.nav-list.is-open {
+  background-color: #ffffff !important;
+  backdrop-filter: none !important;
+}
 
-  ul.nav-list.is-open a {
-    font-size: 1.4rem !important;
-    color: #333333 !important;
-    padding: 16px 32px !important;
-    display: block !important;
-  }
+/* メニューのテキストを濃くして見やすく */
+ul.nav-list.is-open li a {
+  color: #333333 !important;
+  font-weight: 600;
+}
+
+/* メニュー全体を上にかぶせる */
+ul.nav-list.is-open {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 9999;
+  padding: 80px 24px;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 24px !important;
 }
 
 .nav-list a {
