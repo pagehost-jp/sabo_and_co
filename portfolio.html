@@ -11,8 +11,20 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- ========== Header ========== -->
-  <header class="header">
+  <!-- ========== Global Background Video ========== -->
+  <div class="global-bg-video">
+    <video autoplay muted loop playsinline>
+      <source src="background-video.mp4" type="video/mp4">
+    </video>
+  </div>
+
+  <!-- ========== Global Overlay ========== -->
+  <div class="global-overlay"></div>
+
+  <!-- ========== Page Content ========== -->
+  <div class="page-content">
+    <!-- ========== Header ========== -->
+    <header class="header">
     <div class="header-inner">
       <a href="index.html" class="logo">SABO & Co</a>
       <nav class="nav">
@@ -51,7 +63,7 @@
   </div>
 
   <!-- ========== Portfolio Hero ========== -->
-  <section class="portfolio-hero section-fade">
+  <section class="portfolio-hero">
     <div class="portfolio-hero-bg"></div>
     <div class="container">
       <h1 class="portfolio-hero-title fade-in">Portfolio</h1>
@@ -64,7 +76,7 @@
   </section>
 
   <!-- ========== Portfolio Grid ========== -->
-  <section class="portfolio-section section-fade">
+  <section class="portfolio-section">
     <div class="portfolio-section-bg"></div>
     <div class="container">
       <div class="portfolio-grid">
@@ -211,6 +223,8 @@
       </div>
     </div>
   </footer>
+  </div>
+  <!-- ========== End Page Content ========== -->
 
   <script src="script.js"></script>
 </body>
