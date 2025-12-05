@@ -131,4 +131,65 @@ python3 -m http.server 8000
 
 ---
 
-*最終更新: 2025-11-21*
+## 背景画像のスタイル設定（固定プロンプト）
+
+### ふんわり柔らかい背景画像の作り方
+
+**最終設定値:**
+- 白い膜の透明度：`rgba(255, 255, 255, 0.3)` ← **0.3が膜の強さ**
+- 背景画像の透明度：`opacity: 0.8` ← **0.8が画像の濃さ**
+
+**CSS実装例:**
+```css
+.section-fullwidth-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 0;
+}
+
+/* 白い膜（オーバーレイ） */
+.section-fullwidth-bg::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.3);  /* ← 膜の強さ */
+  z-index: 1;
+}
+
+/* 背景画像 */
+.section-fullwidth-bg img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  opacity: 0.8;  /* ← 画像の濃さ */
+}
+
+.section .container {
+  position: relative;
+  z-index: 2;  /* コンテンツを前面に */
+}
+```
+
+**調整のコツ:**
+- もっと白くしたい → 白い膜を `0.4` や `0.5` に上げる
+- もっと色を見せたい → 白い膜を `0.2` や `0.1` に下げる
+- 画像をはっきり見せたい → 画像を `0.9` や `1.0` に上げる
+- 画像を薄くしたい → 画像を `0.6` や `0.5` に下げる
+
+**プロンプト例:**
+```
+背景画像の上に白い膜 0.3、画像 0.8の設定で、
+ふんわり柔らかい背景にしてほしい
+```
+
+---
+
+*最終更新: 2025-12-05*

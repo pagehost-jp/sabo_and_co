@@ -79,11 +79,11 @@
   </section>
 
   <!-- ========== About Section ========== -->
-  <section id="about" class="about">
+  <section id="about" class="about section-fade">
     <div class="about-bg-image"></div>
     <div class="container">
       <h2 class="section-title fade-in-up">SABO & Co とは？</h2>
-      <div class="about-content fade-in-up">
+      <div class="about-content message-body fade-in-up">
         <p>
           SABO & Co は、<br>
           Web と AI を使って「困りごとを最速で解決する」ための<br>
@@ -107,18 +107,14 @@
 
   <!-- ========== Credo Section ========== -->
   <section id="credo" class="credo">
+    <!-- フルワイド背景画像 -->
+    <div class="credo-fullwidth-bg fade-in-up">
+      <img src="credo-bg.jpg" alt="三つのクレド背景">
+    </div>
     <div class="container">
       <p class="section-lead fade-in-up">SABO & Co が大切にしていること</p>
       <h2 class="section-title fade-in-up">三つのクレド</h2>
-    </div>
-    <!-- カードと背景のラッパー -->
-    <div class="credo-cards-wrapper">
-      <!-- フルワイド背景画像 -->
-      <div class="credo-fullwidth-bg fade-in-up">
-        <img src="credo-bg.jpg" alt="三つのクレド背景">
-      </div>
-      <div class="container">
-        <div class="credo-cards">
+      <div class="credo-cards">
         <article class="credo-card fade-in-up">
           <div class="credo-number">01</div>
           <h3 class="credo-title">人の未来を、1ミリ軽くする。</h3>
@@ -147,92 +143,108 @@
           </p>
         </article>
       </div>
-      </div>
     </div>
   </section>
 
   <!-- ========== Service Section ========== -->
-  <section id="service" class="service">
+  <section id="service" class="service section-fade">
+    <!-- フルワイド背景 -->
+    <div class="service-fullwidth-bg fade-in-up"></div>
     <div class="container">
       <h2 class="section-title fade-in-up">Service</h2>
       <p class="section-subtitle fade-in-up">—— 事業内容</p>
 
       <div class="service-list">
         <!-- Service 1 -->
-        <article class="service-item fade-in-up">
-          <div class="service-header">
-            <span class="service-number">01</span>
-            <h3 class="service-name">共創コーディング</h3>
-            <span class="service-name-en">Co-Creation Coding</span>
+        <article class="service-item service-item-with-image fade-in-up">
+          <div class="service-content">
+            <div class="service-header">
+              <span class="service-number">01</span>
+              <h3 class="service-name">共創コーディング</h3>
+              <span class="service-name-en">Co-Creation Coding</span>
+            </div>
+            <p class="service-catch">
+              あなたの"今すぐ解決したい"を、リアルタイムでいっしょに形にします。
+            </p>
+            <p class="service-desc">
+              画面共有・スクショ・対話を通じて、<br>
+              詰まり・設定・バグ・アイデアの具現化までを伴走サポート。
+            </p>
+            <div class="service-features">
+              <h4>できることの例：</h4>
+              <ul>
+                <li>WordPressなどCMSの設定トラブルを一緒に解消</li>
+                <li>バグや設定のつまずきをリアルタイムで修正</li>
+                <li>「こうしたい」をその場で実装</li>
+                <li>AIツールの設定・最適化</li>
+                <li>Web制作の途中で進めなくなった箇所の調整</li>
+                <li>アプリ・ツールのプロトタイプ作成</li>
+                <li>作りたいものの技術的相談・方針づくり</li>
+              </ul>
+            </div>
           </div>
-          <p class="service-catch">
-            あなたの"今すぐ解決したい"を、リアルタイムでいっしょに形にします。
-          </p>
-          <p class="service-desc">
-            画面共有・スクショ・対話を通じて、<br>
-            詰まり・設定・バグ・アイデアの具現化までを伴走サポート。
-          </p>
-          <div class="service-features">
-            <h4>できることの例：</h4>
-            <ul>
-              <li>WordPressなどCMSの設定トラブルを一緒に解消</li>
-              <li>バグや設定のつまずきをリアルタイムで修正</li>
-              <li>「こうしたい」をその場で実装</li>
-              <li>AIツールの設定・最適化</li>
-              <li>Web制作の途中で進めなくなった箇所の調整</li>
-              <li>アプリ・ツールのプロトタイプ作成</li>
-              <li>作りたいものの技術的相談・方針づくり</li>
-            </ul>
+          <div class="service-image">
+            <img src="service-coding.png" alt="共創コーディング">
           </div>
         </article>
 
         <!-- Service 2 -->
-        <article class="service-item fade-in-up">
-          <div class="service-header">
-            <span class="service-number">02</span>
-            <h3 class="service-name">共創ホームページ制作</h3>
-            <span class="service-name-en">HP Creation</span>
+        <article class="service-item service-item-with-image fade-in-up">
+          <div class="service-content">
+            <div class="service-header">
+              <span class="service-number">02</span>
+              <h3 class="service-name">共創ホームページ制作</h3>
+              <span class="service-name-en">HP Creation</span>
+            </div>
+            <p class="service-catch">
+              一緒に作るから速い。
+            </p>
+            <p class="service-desc">
+              あなたの世界観・サービス・ストーリーを大切にしながら、<br>
+              共創コーディングのスタイルで制作する"軽やかなホームページ"。
+            </p>
+            <div class="service-features">
+              <h4>特徴：</h4>
+              <ul>
+                <li>今使っているテーマやサービスに合わせて制作可能</li>
+                <li>世界観の言語化からサポート</li>
+                <li>難しいコード不要</li>
+                <li>相談しながらその場で修正・調整</li>
+                <li>更新が自分でできる構成に最適化</li>
+              </ul>
+              <p class="service-note">「いい感じにしたいけど、どうすれば？」という方に最適です。</p>
+            </div>
           </div>
-          <p class="service-catch">
-            一緒に作るから速い。
-          </p>
-          <p class="service-desc">
-            あなたの世界観・サービス・ストーリーを大切にしながら、<br>
-            共創コーディングのスタイルで制作する"軽やかなホームページ"。
-          </p>
-          <div class="service-features">
-            <h4>特徴：</h4>
-            <ul>
-              <li>今使っているテーマやサービスに合わせて制作可能</li>
-              <li>世界観の言語化からサポート</li>
-              <li>難しいコード不要</li>
-              <li>相談しながらその場で修正・調整</li>
-              <li>更新が自分でできる構成に最適化</li>
-            </ul>
-            <p class="service-note">「いい感じにしたいけど、どうすれば？」という方に最適です。</p>
+          <div class="service-image">
+            <img src="service-homepage.png" alt="共創ホームページ制作">
           </div>
         </article>
 
         <!-- Service 3 -->
-        <article class="service-item fade-in-up">
-          <div class="service-header">
-            <span class="service-number">03</span>
-            <h3 class="service-name">ミニツール開発</h3>
-            <span class="service-name-en">Mini Tools Development</span>
+        <article class="service-item service-item-with-image fade-in-up">
+          <div class="service-content">
+            <div class="service-header">
+              <span class="service-number">03</span>
+              <h3 class="service-name">ミニツール開発</h3>
+              <span class="service-name-en">Mini Tools Development</span>
+            </div>
+            <p class="service-catch">
+              日常の"面倒"や"繰り返し作業"を小さなWebツールとして形にするサービスです。
+            </p>
+            <div class="service-features">
+              <h4>例：</h4>
+              <ul>
+                <li>経理をラクにする自動化ツール</li>
+                <li>問い合わせ管理のミニアプリ</li>
+                <li>フォーム→スプレッドシート連携</li>
+                <li>APIを使った簡易データ取得ツール</li>
+                <li>個人事業主のための作業効率化ツール</li>
+                <li>サウナ・道の駅・温泉探しのミニWebアプリ（例）</li>
+              </ul>
+            </div>
           </div>
-          <p class="service-catch">
-            日常の"面倒"や"繰り返し作業"を小さなWebツールとして形にするサービスです。
-          </p>
-          <div class="service-features">
-            <h4>例：</h4>
-            <ul>
-              <li>経理をラクにする自動化ツール</li>
-              <li>問い合わせ管理のミニアプリ</li>
-              <li>フォーム→スプレッドシート連携</li>
-              <li>APIを使った簡易データ取得ツール</li>
-              <li>個人事業主のための作業効率化ツール</li>
-              <li>サウナ・道の駅・温泉探しのミニWebアプリ（例）</li>
-            </ul>
+          <div class="service-image">
+            <img src="service-minitools.png" alt="ミニツール開発">
           </div>
         </article>
       </div>
@@ -243,20 +255,18 @@
   <section id="persona" class="persona">
     <div class="container">
       <h2 class="section-title fade-in-up">こんな方に選ばれています</h2>
-      <div class="persona-tags fade-in-up">
-        <span class="persona-tag">WordPressやWeb設定でつまずいている</span>
-        <span class="persona-tag">Web制作やAIツールを始めたいが何からやればいいかわからない</span>
-        <span class="persona-tag">コードや設定のエラーで足が止まっている</span>
-        <span class="persona-tag">やりたいことはあるのに形にできない</span>
-        <span class="persona-tag">誰かと一緒に作るスタイルが合っている</span>
-        <span class="persona-tag">作業をサクッと軽くしたい</span>
-        <span class="persona-tag">本音で動ける自分に戻りたい</span>
+      <div class="persona-image fade-in-up">
+        <img src="persona-bg.png" alt="こんな方に選ばれています">
       </div>
     </div>
   </section>
 
   <!-- ========== Message Section ========== -->
-  <section id="message" class="message">
+  <section id="message" class="message section-fade">
+    <!-- フルワイド背景画像 -->
+    <div class="message-fullwidth-bg fade-in-up">
+      <img src="message-bg.png" alt="代表メッセージ背景">
+    </div>
     <div class="container">
       <h2 class="section-title fade-in-up">代表メッセージ</h2>
       <div class="message-inner">
@@ -267,7 +277,7 @@
           <h3 class="message-headline">
             整える × 本音 × 技術で、<br>人の未来を軽くする。
           </h3>
-          <div class="message-text">
+          <div class="message-text message-body">
             <p>こんにちは、SABO & Co 代表の山下健二です。</p>
             <p>
               僕がこの会社を立ち上げた理由は、<br>
@@ -297,6 +307,10 @@
 
   <!-- ========== Contact Section ========== -->
   <section id="contact" class="contact">
+    <!-- フルワイド背景画像 -->
+    <div class="contact-fullwidth-bg fade-in-up">
+      <img src="contact-bg.png" alt="お問い合わせ背景">
+    </div>
     <div class="container">
       <div class="contact-inner fade-in-up">
         <h2 class="contact-title">お気軽にご相談ください。</h2>
