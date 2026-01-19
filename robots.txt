@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pagehost-jp.github.io/sabo_and_co/sitemap.xml
